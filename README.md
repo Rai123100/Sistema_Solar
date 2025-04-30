@@ -1,7 +1,3 @@
 # Sistema_Solar
 
-Trabalho Realizado em grupo, na instituição "Senai", pelo curso "Desenvolvimento de Sistemas Web".
-
-Um teste que desafiou o conhecimento dos alunos em relação as linguagens HTML e CSS.
-
-
+Projeto desenvolvido em grupo na instituição Senai, durante o curso de Desenvolvimento de Sistemas Web. Em uma competição entre os alunos, este trabalho se destacou, conquistando o primeiro lugar ao demonstrar domínio em HTML e CSS.
