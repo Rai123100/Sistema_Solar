@@ -11,131 +11,128 @@ body {
   /* Menu */
   #menu {
     position: absolute;
-    top: 20px;
-    left: 50px;
+    top: 2.5vh;       /* 20px */
+    left: 2.6vw;     /* 50px */
     z-index: 1000;
   }
-  
+
   .hamburger-area {
     position: relative;
     display: inline-block;
   }
-  
+
   .hamburger {
     cursor: pointer;
   }
-  
+
   .hamburger svg {
-    height: 3em;
+    height: 6vh; /* Responsivo */
     transition: transform 0.3s;
   }
-  
+
   .line {
     fill: none;
     stroke: white;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-width: 3;
+    stroke-width: 0.1875rem; /* 3px */
   }
-  
+
   .line-top-bottom {
     stroke-dasharray: 12 63;
   }
-  
+
   .hamburger-area:hover .teste {
     opacity: 1;
     pointer-events: auto;
   }
-  
+
   .teste {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: -2vh;
+    left: -1.8vw; 
     background-color: transparent;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 2vh;
+    padding: 0.8vh;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    min-width: 100px;
+    width: 6vw;
   }
-  
+
   .dropdown-item {
     text-decoration: none;
     color: white;
     display: block;
-    padding: 6px 0;
+    padding: 0.5vh;
     font-weight: bold;
+    font-size: clamp(1.7vh, 1.7vh, 2vh);
     text-align: center;
-    width: 100%;
   }
-  
+
   .dropdown-item:hover {
     color: #ffd700;
-    letter-spacing: 1px;
+    letter-spacing: 0.1vw;
+    align-items: center;
   }
-  
+
   .dropdown-divider {
     border: none;
-    height: 1px;
+    height: 0.2vh;
     background: white;
-    margin: 5px 0;
   }
-  
+
   li {
     list-style: none;
   }
-  
-  .line-top-bottom {
-    stroke-dasharray: 12 63;
-  }
-  
+
   .hamburger input:checked + svg {
     transform: rotate(-45deg);
   }
-  
+
   .hamburger input:checked + svg .line-top-bottom {
     stroke-dasharray: 20 300;
-    stroke-dashoffset:-32.42;
+    stroke-dashoffset: -32.42;
   }
-  
 
-/* Botão de Aparecer Orbita */
+
+
+  /* Botão de Aparecer Orbita */
   .button {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 2.2vh; /* 20px */
+    right: 2.2vw; /* 20px */
     z-index: 1000;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1.1vh 2vw; /* 10px 20px */
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid white;
+    font-size: 1.8vh;
+    border-radius: 0.55vh;
+    border: 0.22vh solid white;
     cursor: pointer;
     transition: background-color 0.3s ease;
     backdrop-filter: blur(4px);
   }
-  
+
   .button:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
-  
+
   #animateButton {
     display: none;
   }
-  
+
   #animateButton:checked ~ .animatedElement {
     animation: aparecer 3s forwards;
   }
-  
+
   @keyframes aparecer {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-  
+
+    
   
   
   /* Nyan cat */
@@ -214,9 +211,16 @@ body {
     background-size: cover;
   }
   
-  
-  
-  
+  #linha1 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(200, 200, 200, 0.5); /* ou ajuste a cor desejada */
+  }
+
   
   @keyframes mercurio {
     0% {
