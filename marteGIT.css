@@ -48,12 +48,12 @@ body{
   }
 
   .teste {
-    position: relative;
-    top: -2vh;
+    position: absolute;
+    margin-top: -0.5vh;
     left: -1.8vw; 
     background-color: transparent;
     border-radius: 2vh;
-    padding: 0.8vh;
+    padding: 1vh;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
