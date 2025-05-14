@@ -7,7 +7,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <div id="carouselExample" class="carousel slide">
+
+      <div id="menu">
+        <div class="hamburger-area">
+          <div class="hamburger">
+            <svg viewBox="0 0 32 32">
+              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="line" d="M7 16 27 16"></path>
+            </svg>
+          </div>
+          <ul class="teste">
+            <li></li>
+            <li><a class="dropdown-item" href="index.html">HOME</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="solGIT.html">SOL</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="mercurioGIT.html">MERCÚRIO</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="venusGIT.html">VÊNUS</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="terraGIT.html">TERRA</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="marteGIT.html">MARTE</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="jupiterGIT.html">JÚPITER</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="saturnoGIT.html">SATURNO</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="uranoGIT.html">URANO</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="netunoGIT.html">NETUNO</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="comicGIT.html">COMIC</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://scratch.mit.edu/projects/1013367686/fullscreen/">JOGUINHO</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+    <div id="carouselExample" class="carousel slide" data-bs-wrap="false">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="img/pag1.gif" class="d-block w-100" alt="...">
@@ -31,15 +70,153 @@
           </div> <div class="carousel-item">
             <img src="img/pag8.gif" class="d-block w-100" alt="...">
           </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+          <button id="prevBtn" class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button id="nextBtn" class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
       </div>
+      <style>
+        .carousel-control-prev,
+        .carousel-control-next {
+          top: 50%;
+          transform: translateY(-50%);
+          height: auto;
+          position: fixed;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 20vh;   /* Largura em relação à altura da tela */
+          height: 20vh;  /* Altura em relação à altura da tela */
+          background-size: contain; /* Garante que o ícone se ajuste */
+          position: fixed;
+        }
+        /* Menu */
+        #menu {
+          position: absolute;
+          top: 2.5vh;       /* 20px */
+          left: 2.6vw;     /* 50px */
+          z-index: 1000;
+        }
+
+        .hamburger-area {
+          position: relative;
+          display: inline-block;
+        }
+
+        .hamburger {
+          cursor: pointer;
+        }
+
+        .hamburger svg {
+          height: 6vh; /* Responsivo */
+          transition: transform 0.3s;
+        }
+
+        .line {
+          fill: none;
+          stroke: white;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-width: 0.1875rem; /* 3px */
+        }
+
+        .line-top-bottom {
+          stroke-dasharray: 12 63;
+        }
+
+        .hamburger-area:hover .teste {
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .teste {
+          position: relative;
+          top: -2vh;
+          left: -1.8vw; 
+          background-color: transparent;
+          border-radius: 2vh;
+          padding: 0.8vh;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+          width: 6vw;
+        }
+
+        .dropdown-item {
+          text-decoration: none;
+          color: white;
+          display: block;
+          padding: 0.5vh;
+          font-weight: bold;
+          font-size: clamp(1.7vh, 1.7vh, 2vh);
+          text-align: center;
+        }
+
+        .dropdown-item:hover {
+          color: #ffd700;
+          letter-spacing: 0.1vw;
+          align-items: center;
+        }
+
+        .dropdown-divider {
+          border: none;
+          height: 0.2vh;
+          background: white;
+        }
+
+        li {
+          list-style: none;
+        }
+
+        .hamburger input:checked + svg {
+          transform: rotate(-45deg);
+        }
+
+        .hamburger input:checked + svg .line-top-bottom {
+          stroke-dasharray: 20 300;
+          stroke-dashoffset: -32.42;
+        }
+      </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const carouselElement = document.querySelector('#carouselExample');
+          const items = carouselElement.querySelectorAll('.carousel-item');
+          const prevBtn = document.getElementById('prevBtn');
+          const nextBtn = document.getElementById('nextBtn');
+
+          const updateButtons = () => {
+            const activeIndex = [...items].findIndex(item => item.classList.contains('active'));
+
+            // Esconde o botão da esquerda no primeiro slide
+            if (activeIndex === 0) {
+              prevBtn.style.display = 'none';
+            } else {
+              prevBtn.style.display = '';
+            }
+
+            // Esconde o botão da direita no último slide
+            if (activeIndex === items.length - 1) {
+              nextBtn.style.display = 'none';
+            } else {
+              nextBtn.style.display = '';
+            }
+          };
+
+          // Inicial
+          updateButtons();
+
+          // Quando o slide muda
+          carouselElement.addEventListener('slid.bs.carousel', updateButtons);
+        });
+      </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
